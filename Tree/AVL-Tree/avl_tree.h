@@ -1,5 +1,11 @@
+/** @file avl_tree.h
+*  
+* @brief Balanced binary tree
+*
+*/
 #ifndef AVL_TREE_H
 #define AVL_TREE_H
+
 
 typedef struct _AVLTree AVLTree;
 
@@ -17,7 +23,7 @@ AVLTree *avl_tree_new(AVLTreeKeyCompareFunc compre_func);
 
 AVLTreeNode *avl_tree_insert(AVLTree *tree, AVLTreeKey key, AVLTreeValue value);
 
-int avl_tree_delete(AVLTree *tree, AVLTreeKey key);
+AVLTreeNode *avl_tree_delete(AVLTree *tree, AVLTreeKey key);
 
 AVLTreeNode *avl_tree_lookup_node(AVLTree *tree, AVLTreeKey key);
 
